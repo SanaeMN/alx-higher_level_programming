@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, n=0):
         """class constructor"""
-         if not isinstance(n, int):
+        if not isinstance(n, int):
             raise TypeError('size must be an integer')
         if n < 0:
             raise ValueError('size must be >= 0')
