@@ -5,10 +5,10 @@
 class Square:
     """Represent a square class"""
 
-    def __init__(self, n=0):
+    def __init__(self, n=0, position=(0, 0)):
         """class constructor"""
         self.__size = n
-	self.__position = position
+        self.__position = position
 
     def area(self):
         """Return current area"""
@@ -44,7 +44,7 @@ class Square:
         """print the square with #"""
         if self.__size == 0:
             print("")
-	    return
+            return
         for _ in range(self.position[-1]):
             print("")
         for _ in range(self.size):
