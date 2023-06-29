@@ -7,7 +7,17 @@ class Square:
 
     def __init__(self, n=0, position=(0, 0)):
         """class constructor"""
+        if not isinstance(n, int):
+            raise TypeError('size must be an integer')
+        if n < 0:
+            raise ValueError('size must be >= 0')
         self.__size = n
+        if not isinstance(position, tuple) or len(position) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if type(position[0]) is not int or type(position[-1]) is not int:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if position[0] < 0 or position[-1] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = position
 
     def area(self):
